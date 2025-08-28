@@ -49,17 +49,17 @@ include "config.php";
                     if (isset($_SESSION['role']) && $_SESSION['role'] == "Dokter") {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link active <?php echo ($page == "users") ? 'active' : ''; ?>" href="?page=users">
+                            <a class="nav-link <?php echo ($page == "users") ? 'active' : ''; ?>" href="?page=users">
                                 <i class="fas fa-users mr-1"></i> Users
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active <?php echo ($page == "aturan") ? 'active' : ''; ?>" href="?page=aturan">
+                            <a class="nav-link <?php echo ($page == "aturan") ? 'active' : ''; ?>" href="?page=aturan">
                                 <i class="fas fa-book-medical mr-1"></i> Basis Aturan
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active <?php echo ($page == "konsultasiadm") ? 'active' : ''; ?>" href="?page=konsultasiadm">
+                            <a class="nav-link <?php echo ($page == "konsultasiadm") ? 'active' : ''; ?>" href="?page=konsultasiadm">
                                 <i class="fas fa-comments mr-1"></i> Konsultasi
                             </a>
                         </li>
@@ -68,27 +68,32 @@ include "config.php";
                     } elseif (isset($_SESSION['role']) && $_SESSION['role'] == "Admin") {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link active <?php echo ($page == "users") ? 'active' : ''; ?>" href="?page=users">
-                                <i class="fas fa-user"></i> Users
+                            <a class="nav-link text-white <?php echo ($page == "dashboard") ? 'active' : ''; ?>" href="?page=dashboard">
+                                <i class="fas fa-chart-pie mr-1"></i> Dashboard
                             </a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link <?php echo ($page == "gejala") ? 'active' : ''; ?>" href="?page=gejala">
+                        <li class="nav-item">
+                            <a class="nav-link text-white <?php echo ($page == "users") ? 'active' : ''; ?>" href="?page=users">
+                                <i class="fas fa-user mr-1"></i> Users
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white <?php echo ($page == "gejala") ? 'active' : ''; ?>" href="?page=gejala">
                                 <i class="fas fa-list-ul mr-1"></i> Gejala
                             </a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link <?php echo ($page == "penyakit") ? 'active' : ''; ?>" href="?page=penyakit">
+                        <li class="nav-item">
+                            <a class="nav-link text-white <?php echo ($page == "penyakit") ? 'active' : ''; ?>" href="?page=penyakit">
                                 <i class="fas fa-virus mr-1"></i> Penyakit
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active <?php echo ($page == "aturan") ? 'active' : ''; ?>" href="?page=aturan">
+                            <a class="nav-link text-white <?php echo ($page == "aturan") ? 'active' : ''; ?>" href="?page=aturan">
                                 <i class="fas fa-book-medical mr-1"></i> Basis Aturan
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active <?php echo ($page == "konsultasiadm") ? 'active' : ''; ?>" href="?page=konsultasiadm">
+                            <a class="nav-link text-white <?php echo ($page == "konsultasiadm") ? 'active' : ''; ?>" href="?page=konsultasiadm">
                                 <i class="fas fa-comments mr-1"></i> Detail Konsultasi
                             </a>
                         </li>
@@ -96,7 +101,7 @@ include "config.php";
                     } else {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link active <?php echo ($page == "konsultasi") ? 'active' : ''; ?>" href="?page=konsultasi">
+                            <a class="nav-link text-white <?php echo ($page == "konsultasi") ? 'active' : ''; ?>" href="?page=konsultasi">
                                 <i class="fas fa-comment-medical mr-1"></i> Konsultasi
                             </a>
                         </li>
@@ -108,7 +113,7 @@ include "config.php";
                 <!-- User menu -->
                 <ul class="navbar-nav ml-auto">
                     <?php if (isset($_SESSION['username'])): ?>
-                        <li class="nav-item dropdown active">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
                                 <i class="fas fa-user-circle mr-1"></i> <?php echo $_SESSION['username']; ?>
                             </a>
@@ -150,6 +155,8 @@ include "config.php";
 
         if ($page == "") {
             include "welcome.php";
+        } elseif ($page == "dashboard") {
+            include "dashboard/tampil_dashboard.php";
         } elseif ($page == "gejala") {
             if ($action == "") {
                 include "gejala/tampil_gejala.php";
@@ -242,7 +249,7 @@ include "config.php";
                 icon: 'success',
                 title: 'Selamat datang, <?php echo $_SESSION['username']; ?>!',
                 text: 'Anda berhasil login sebagai <?php echo $_SESSION['role']; ?>.',
-                position: 'top-center', // Posisi di tengah
+                position: 'top-center',
                 showConfirmButton: false,
                 timer: 2500
             });
