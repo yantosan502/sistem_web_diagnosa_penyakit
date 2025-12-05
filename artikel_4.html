@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori dan Indikator Stunting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .justify-text {
+            text-align: justify;
+        }
+        .table-custom {
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .badge-custom {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5 mb-5">
+        <h1 class="fw-bold text-primary">Kategori dan Indikator Stunting</h1>
+        <p class="text-muted"><i class="far fa-calendar-alt me-2"></i> 15 Maret 2025 | <i class="far fa-user me-2"></i> Tim Kesehatan</p>
+        <img src="images/gambar 6.jpg" class="img-fluid mb-4" alt="Kategori Stunting" style="max-width: 50%; height: auto; border-radius: 15px;">
+        <p class="justify-text">Dalam mendiagnosis stunting pada anak, penting untuk memahami kategori dan indikator yang digunakan sebagai acuan. Kementerian Kesehatan RI dan WHO telah menetapkan standar pengukuran yang jelas untuk mengidentifikasi kondisi stunting pada anak balita.</p>
+
+        <!-- Kategori Stunting -->
+        <h3 class="mt-5 mb-3 fw-bold text-primary"><i class="fas fa-chart-line me-2"></i>Kategori Stunting Berdasarkan Tingkat Keparahan</h3>
+        <p class="justify-text">Menurut Kementerian Kesehatan Republik Indonesia, stunting dibagi menjadi beberapa kategori berdasarkan nilai Z-Score (Standar Deviasi) dari pengukuran tinggi badan menurut umur (TB/U):</p>
+
+        <div class="card table-custom mb-4">
+            <div class="card-body">
+                <table class="table table-bordered table-hover mb-0">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Kategori</th>
+                            <th>Nilai Z-Score</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge bg-success badge-custom">Normal</span></td>
+                            <td>Z-score ≥ -2 SD</td>
+                            <td>Tinggi badan anak sesuai dengan standar WHO</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge bg-warning badge-custom">Stunted (Pendek)</span></td>
+                            <td>-3 SD ≤ Z-score < -2 SD</td>
+                            <td>Anak mengalami gangguan pertumbuhan sedang</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge bg-danger badge-custom">Severely Stunted (Sangat Pendek)</span></td>
+                            <td>Z-score < -3 SD</td>
+                            <td>Anak mengalami gangguan pertumbuhan berat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <i class="fas fa-info-circle me-2"></i><strong>Catatan Penting:</strong> Standar yang dipakai sebagai acuan adalah kurva pertumbuhan yang dibuat oleh Badan Kesehatan Dunia (WHO) melalui WHO Child Growth Standards.
+        </div>
+
+        <!-- Indikator Stunting -->
+        <h3 class="mt-5 mb-3 fw-bold text-primary"><i class="fas fa-stethoscope me-2"></i>Indikator Penentu Stunting</h3>
+        <p class="justify-text">Untuk menentukan apakah seorang anak mengalami stunting, terdapat beberapa indikator utama yang digunakan dalam pengukuran:</p>
+
+        <!-- Indikator 1: Tinggi/Panjang Badan -->
+        <div class="card mb-3 border-primary">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="fas fa-ruler-vertical me-2"></i>1. Tinggi/Panjang Badan Menurut Umur (TB/U atau PB/U)</h5>
+            </div>
+            <div class="card-body">
+                <p class="justify-text"><strong>Pengukuran Utama:</strong> Ini adalah indikator paling penting untuk mendiagnosis stunting.</p>
+                <ul class="justify-text">
+                    <li><strong>Anak usia 0-24 bulan:</strong> Diukur dengan posisi berbaring (Panjang Badan)</li>
+                    <li><strong>Anak usia >24 bulan:</strong> Diukur dengan posisi berdiri (Tinggi Badan)</li>
+                    <li><strong>Standar acuan:</strong> WHO Child Growth Standards berdasarkan jenis kelamin dan usia</li>
+                </ul>
+                <div class="alert alert-warning" role="alert">
+                    <strong>Perbedaan Pengukuran:</strong> Tinggi badan (berdiri) lebih pendek sekitar 0,7 cm dibandingkan panjang badan (berbaring). Konversi diperlukan jika pengukuran tidak sesuai kelompok umur.
+                </div>
+            </div>
+        </div>
+
+        <!-- Indikator 2: Berat Badan -->
+        <div class="card mb-3 border-success">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0"><i class="fas fa-weight me-2"></i>2. Berat Badan Menurut Umur (BB/U)</h5>
+            </div>
+            <div class="card-body">
+                <p class="justify-text"><strong>Indikator Pendukung:</strong> Digunakan untuk melengkapi diagnosis stunting dan menilai status gizi secara umum.</p>
+                <ul class="justify-text">
+                    <li>Membantu mengidentifikasi masalah gizi akut dan kronis</li>
+                    <li>Berat badan sangat kurang dapat mengindikasikan stunting berat</li>
+                    <li>Kombinasi dengan TB/U memberikan gambaran status gizi yang lebih lengkap</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Indikator 3: Perkembangan Kognitif -->
+        <div class="card mb-3 border-info">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0"><i class="fas fa-brain me-2"></i>3. Perkembangan Kognitif dan Memori Belajar</h5>
+            </div>
+            <div class="card-body">
+                <p class="justify-text"><strong>Indikator Tambahan:</strong> Menilai dampak stunting pada perkembangan otak anak.</p>
+                
+                <h6 class="fw-bold mt-3">Perkembangan Normal Berdasarkan Usia:</h6>
+                
+                <div class="accordion" id="accordionCognitive">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                <strong>Usia 2 Tahun</strong>
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionCognitive">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Tertarik dengan eksplorasi lingkungan</li>
+                                    <li>Mulai belajar merangkak dan berjalan</li>
+                                    <li>Menunjuk objek untuk berinteraksi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                <strong>Usia 3-4 Tahun</strong>
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionCognitive">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Kemampuan berpikir logis mulai berkembang</li>
+                                    <li>Dapat membedakan benda berdasarkan ukuran, jenis, dan warna</li>
+                                    <li>Mulai tertarik pada perhitungan sederhana</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                <strong>Usia 5 Tahun</strong>
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionCognitive">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Perkembangan bahasa mulai terlihat</li>
+                                    <li>Belajar kosakata dan memahami makna kalimat</li>
+                                    <li>Dapat merangkai kalimat sederhana</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kategori Berdasarkan Waktu Kejadian -->
+        <h3 class="mt-5 mb-3 fw-bold text-primary"><i class="fas fa-clock me-2"></i>Kategori Stunting Berdasarkan Waktu Kejadian</h3>
+        <p class="justify-text">Berdasarkan penelitian The Wechsler Preschool Primary Scales of Intelligence (WPPSI), stunting juga dapat dikategorikan berdasarkan waktu terjadinya:</p>
+
+        <div class="row g-3 mb-4">
+            <div class="col-md-6">
+                <div class="card h-100 border-warning">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Early Onset Persistent</h5>
+                        <p class="card-text justify-text">
+                            <strong>Waktu:</strong> Terjadi usia 1-6 bulan, bertahan hingga 5 tahun<br>
+                            <strong>Penyebab:</strong> Faktor ekonomi, sanitasi buruk, kurang stimulasi<br>
+                            <strong>Dampak:</strong> Kemampuan kognitif lebih rendah dari anak normal
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 border-info">
+                    <div class="card-body">
+                        <h5 class="card-title text-info"><i class="fas fa-heart me-2"></i>Early Onset Recovered</h5>
+                        <p class="card-text justify-text">
+                            <strong>Waktu:</strong> Terjadi usia 1-6 bulan hingga 5 tahun<br>
+                            <strong>Penyebab:</strong> Keterlambatan pertumbuhan di usia 2 tahun<br>
+                            <strong>Kondisi:</strong> Masih dapat dipulihkan dengan intervensi tepat
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 border-danger">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger"><i class="fas fa-times-circle me-2"></i>Late Onset Persistent</h5>
+                        <p class="card-text justify-text">
+                            <strong>Waktu:</strong> Terjadi usia 7-24 bulan, bertahan hingga 5 tahun<br>
+                            <strong>Penyebab:</strong> Kurang ASI eksklusif dan MPASI tidak adekuat<br>
+                            <strong>Dampak:</strong> Perkembangan kognitif terlambat, mudah terpapar virus
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 border-secondary">
+                    <div class="card-body">
+                        <h5 class="card-title text-secondary"><i class="fas fa-hourglass-half me-2"></i>Late Onset Only</h5>
+                        <p class="card-text justify-text">
+                            <strong>Waktu:</strong> Terjadi usia 7-24 bulan<br>
+                            <strong>Penyebab:</strong> Kurang nutrisi hingga usia 2 tahun<br>
+                            <strong>Dampak:</strong> Mudah terkena infeksi, penurunan berat badan
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perbedaan Penting -->
+        <div class="alert alert-success" role="alert">
+            <h5 class="alert-heading"><i class="fas fa-check-circle me-2"></i>Perbedaan Penting!</h5>
+            <hr>
+            <p class="mb-0 justify-text"><strong>Stunting pasti pendek, tetapi pendek belum tentu stunting.</strong> Anak dengan tubuh pendek bisa terlahir dari orangtua yang tidak terlalu tinggi (faktor genetik), sedangkan stunting adalah kondisi gagal tumbuh akibat kekurangan gizi di 1000 hari pertama kehidupan yang berefek jangka panjang hingga dewasa.</p>
+        </div>
+
+        <!-- Cara Pengukuran -->
+        <h3 class="mt-5 mb-3 fw-bold text-primary"><i class="fas fa-tools me-2"></i>Cara Pengukuran Status Stunting</h3>
+        <div class="card">
+            <div class="card-body">
+                <ol class="justify-text">
+                    <li><strong>Tentukan Umur Anak:</strong> Hitung umur dalam bulan penuh (30 hari = 1 bulan)</li>
+                    <li><strong>Ukur Tinggi/Panjang Badan:</strong> 
+                        <ul>
+                            <li>Anak < 2 tahun: Ukur panjang badan (berbaring)</li>
+                            <li>Anak ≥ 2 tahun: Ukur tinggi badan (berdiri)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Timbang Berat Badan:</strong> Gunakan timbangan presisi 0,1 kg</li>
+                    <li><strong>Hitung Z-Score:</strong> Bandingkan dengan tabel standar WHO 2006</li>
+                    <li><strong>Tentukan Kategori:</strong> Lihat hasil Z-score untuk menentukan status stunting</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Kesimpulan -->
+        <div class="card bg-light mt-4">
+            <div class="card-body">
+                <h5 class="card-title fw-bold"><i class="fas fa-lightbulb me-2"></i>Kesimpulan</h5>
+                <p class="card-text justify-text">
+                    Memahami kategori dan indikator stunting sangat penting untuk deteksi dini dan penanganan yang tepat. Dengan mengetahui standar pengukuran WHO dan karakteristik setiap kategori, orang tua dan tenaga kesehatan dapat melakukan pemantauan pertumbuhan anak secara berkala dan mengambil tindakan preventif maupun kuratif yang diperlukan.
+                </p>
+                <p class="card-text justify-text mb-0">
+                    <strong>Ingat:</strong> Pemantauan rutin setiap bulan pada 2 tahun pertama kehidupan anak sangat penting untuk mencegah dan mengatasi stunting sejak dini!
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-4 d-flex justify-content-between">
+            <a href="index.php" class="btn btn-outline-primary"><i class="fas fa-arrow-left me-2"></i>Kembali ke Beranda</a>
+        </div>
+
+        <!-- Referensi -->
+        <div class="card mt-4 border-0 bg-light">
+            <div class="card-body">
+                <h6 class="fw-bold">Sumber Referensi:</h6>
+                <ul class="small mb-0">
+                    <li>Kementerian Kesehatan RI - Direktorat Jenderal Pelayanan Kesehatan (2021)</li>
+                    <li>WHO Child Growth Standards (2006)</li>
+                    <li>Al-Rahmad, A. H., & Fadillah, I. (2023). Modul Penilaian Status Gizi dan Pertumbuhan Balita</li>
+                    <li>BKKBN - Badan Kependudukan dan Keluarga Berencana Nasional (2021)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</body>
+</html>
