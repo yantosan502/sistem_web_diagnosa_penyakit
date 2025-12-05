@@ -16,21 +16,21 @@
 <body>
     <div class="container mt-5">
         <div class="text-center mb-4">
-            <h1 class="fw-bold">Selamat Datang</h1>
+            <!-- <h1 class="fw-bold">Selamat Datang</h1> -->
             <h3>Sistem Pakar Deteksi Penyakit Stunting Pada Anak</h3>
             <h3>Metode Forward Chaining</h3>
         </div>
 
-        <!-- Artikel Section -->
+        <!-- Berita Section -->
         <section class="container my-5">
             <div class="row mb-4">
                 <div class="col-12">
-                    <h2 class="fw-bold text-center">Artikel Kesehatan Terkini</h2>
+                    <h2 class="fw-bold text-center">Berita Kesehatan</h2>
                     <p class="text-center text-muted">Informasi lengkap seputar stunting dan kesehatan anak</p>
                 </div>
             </div>
 
-            <!-- 3 Artikel Sejajar -->
+            <!-- 3 Berita Sejajar -->
             <div class="row g-4 mb-5">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm">
@@ -89,6 +89,27 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="images/gambar 6.jpg" class="card-img-top" alt="Kategori Stunting" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-warning text-dark rounded-pill px-3 py-2">Edukasi</span>
+                                <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 15 Mar 2025</small>
+                            </div>
+                            <h5 class="card-title fw-bold">Kategori & Indikator Stunting</h5>
+                            <p class="card-text" style="text-align: justify;">Kenali kategori stunting berdasarkan Z-Score WHO: Normal, Stunted, dan Severely Stunted. Pelajari indikator pengukuran yang tepat untuk deteksi dini stunting pada anak.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="artikel_4.html" class="btn btn-outline-primary rounded-pill px-4">Baca Selengkapnya</a>
+                                <div>
+                                    <i class="far fa-eye me-1"></i> 789
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Area Fungsional (Pencarian, Kategori, Artikel Populer) -->
@@ -97,7 +118,7 @@
                 <div class="col-md-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-header bg-primary text-white py-3">
-                            <h5 class="mb-0"><i class="fas fa-search me-2"></i>Cari Artikel</h5>
+                            <h5 class="mb-0"><i class="fas fa-search me-2"></i>Cari Berita</h5>
                         </div>
                         <div class="card-body">
                             <div class="input-group">
@@ -142,7 +163,7 @@
                 <div class="col-md-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-header bg-primary text-white py-3">
-                            <h5 class="mb-0"><i class="fas fa-star me-2"></i>Artikel Populer</h5>
+                            <h5 class="mb-0"><i class="fas fa-star me-2"></i>Berita Populer</h5>
                         </div>
                         <div class="card-body p-0">
                             <ul class="list-group list-group-flush">
@@ -169,14 +190,14 @@
                             </ul>
                         </div>
                         <div class="card-footer bg-white text-center">
-                            <a href="artikel.html" class="text-decoration-none">Lihat Semua Artikel <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="artikel.html" class="text-decoration-none">Lihat Semua Berita<i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-5">
-                <a href="artikel.html" class="btn btn-primary rounded-pill px-4 py-2">Jelajahi Semua Artikel</a>
+                <a href="artikel.html" class="btn btn-primary rounded-pill px-4 py-2">Jelajahi Semua Berita</a>
             </div>
         </section>
     </div>
