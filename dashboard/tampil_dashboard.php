@@ -1,5 +1,5 @@
 <?php
-// dashboard/tampil_dashboard.php - Versi Simple untuk debugging
+// dashboard/tampil_dashboard.php
 
 // Cek apakah user adalah Admin
 if (!isset($_SESSION['role']) || $_SESSION['role'] != "Admin") {
@@ -200,8 +200,8 @@ if ($result && $row = mysqli_fetch_assoc($result)) {
                                                 <td><?php echo date('d/m/Y', strtotime($row['tanggal'])); ?></td>
                                                 <td><?php echo $row['nama']; ?></td>
                                                 <td>
-                                                    <a href="?page=konsultasiadm&action=detail&idkonsultasi=<?php echo $row['idkonsultasi']; ?>" 
-                                                       class="btn btn-sm btn-info">
+                                                    <a href="?page=konsultasiadm&action=detail&idkonsultasi=<?php echo $row['idkonsultasi']; ?>&from=dashboard" 
+                                                        class="btn btn-sm btn-info">
                                                         <i class="fas fa-eye mr-1"></i>Detail
                                                     </a>
                                                 </td>
