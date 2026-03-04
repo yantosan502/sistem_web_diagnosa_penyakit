@@ -38,11 +38,6 @@ include "config.php";
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo ($page == "") ? 'active' : ''; ?>" href="index.php">
-                            <i class="fas fa-home mr-1"></i> Home
-                        </a>
-                    </li>
 
                     <!-- setting hak akses -->
                     <?php
@@ -258,3 +253,4 @@ include "config.php";
     endif; ?>
 </body>
 </html>
+
