@@ -5,11 +5,49 @@ if (isset($_POST['proses'])) {
 
     // mengambil data dari form
     $nmpasien = $_POST['nmpasien'];
-    $umur = $_POST['umur'];
+    // $umur = $_POST['umur'];
+    $umur = (int)$_POST['umur'];
     $b_badan = $_POST['b_badan'];
     $t_badan = $_POST['t_badan'];
 
     $tgl = date("Y/m/d");
+
+    // validasi usia
+    if ($umur < 0 || $umur > 59) {
+        echo "<script>
+                alert('Error: Usia harus antara 0-59 bulan!');
+                window.history.back();
+              </script>";
+        exit;
+    }
+
+    // fungsi kategorisasi usia
+    function kategorikan_usia($umur) {
+        if ($umur >= 0 && $umur <= 6) {
+            return "Bayi (0-6 bulan)";
+        } elseif ($umur >= 7 && $umur <= 23) {
+            return "Baduta (7-23 bulan)";
+        } else { // 24-59
+            return "Balita (24-59 bulan)";
+        }
+    }
+
+    // fungsi format usia
+    function format_usia($umur) {
+        $tahun = floor($umur / 12);
+        $bulan = $umur % 12;
+        
+        if ($tahun == 0) {
+            return "$bulan bulan";
+        } elseif ($bulan == 0) {
+            return "$tahun tahun";
+        } else {
+            return "$tahun tahun $bulan bulan";
+        }
+    }
+
+    $kategori_usia = kategorikan_usia($umur);
+    $usia_format = format_usia($umur);
 
     // proses simpan konsultasi
     $sql = "INSERT INTO konsultasi VALUES (Null,'$tgl','$nmpasien','$umur','$b_badan','$t_badan')";
@@ -90,13 +128,11 @@ if (isset($_POST['proses'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 </head>
-
 <body>
     <div class="row">
         <div class="col-sm-12">
@@ -110,8 +146,9 @@ if (isset($_POST['proses'])) {
                                 <input type="text" class="form-control" name="nmpasien" maxlength="50" required>
                             </div>
                             <div class="form-group">
-                                <label for="">Umur</label>
-                                <input type="text" class="form-control" name="umur" maxlength="10" required>
+                                <label for="">Umur (dalam bulan)</label>
+                                <input type="text" class="form-control" name="umur" min="0" max="59" required>
+                                <small class="form-text text-muted">Usia harus antara 0-59 bulan (0-5 tahun)</small>
                             </div>
                             <div class="form-group">
                                 <label for="">Berat Badan (KG)</label>
@@ -180,11 +217,8 @@ if (isset($_POST['proses'])) {
                 alert('Pilih setidaknya satu gejala!');
                 return false;
             }
-
             return true;
-
         }
     </script>
 </body>
-
 </html>
